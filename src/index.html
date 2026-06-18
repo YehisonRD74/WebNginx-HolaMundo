@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo - Premium Edition</title>
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        /* Fondo con un gradiente moderno y dinámico */
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            overflow: hidden;
+        }
+
+        /* Tarjeta flotante con efecto cristal (Glassmorphism) */
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 50px 80px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            animation: fadinUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: relative;
+        }
+
+        /* Decoración brillante de fondo para la tarjeta */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(135deg, #38bdf8, #ec4899);
+            border-radius: 24px;
+            z-index: -1;
+            opacity: 0.15;
+            transition: opacity 0.5s ease;
+        }
+
+        .card:hover::before {
+            opacity: 0.3;
+        }
+
+        /* Estilo del texto principal */
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        /* Subtexto o descripción */
+        p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Animación suave de entrada */
+        @keyframes fadinUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Adaptabilidad para pantallas móviles */
+        @media (max-width: 600px) {
+            .card {
+                padding: 40px 30px;
+                width: 90%;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>¡Hola Mundo!</h1>
+        <p>Diseño Frontend Profesional</p>
+    </div>
+
+</body>
+</html>

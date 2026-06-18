@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  servidor-web:
+    image: nginx:latest # Descarga la última versión oficial de Nginx
+    container_name: mi_nginx_local
+    ports:
+      - "8080:80" # Mapea el puerto 8080 de tu PC al puerto 80 del contenedor
+    volumes:
+      # Enlaza tu carpeta local 'src' con la ruta donde Nginx busca los archivos web
+      - ./src:/usr/share/nginx/html
